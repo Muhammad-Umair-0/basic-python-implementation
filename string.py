@@ -53,3 +53,25 @@ print(a[:5])
 print(a[2:])
 
 print(a[:-1])
+
+
+## String modification 
+#upper case
+print(a.upper())
+
+#lower case
+print(a.lower())
+
+
+# Remove white space
+a = " Meri Tech "
+print(a.strip())
+
+#Replace String 
+print(a.replace("e", "a"))
+
+## split 
+print(a.split(" "))
+
+
+#String Concatenation 
