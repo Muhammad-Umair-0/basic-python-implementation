@@ -75,3 +75,7 @@ print(a.split(" "))
 
 
 #String Concatenation 
+a = "Meri"
+b= "Tech"
+c= a+b
+print(c)
