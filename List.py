@@ -29,3 +29,18 @@ print(list_1)
 print(type(list_1))
 
 #accessing the list
+
+# access the list 3rd value at index 2
+print(list_1[2])
+
+#negative index used for decending order to access list 
+print(list1[-1])
+
+# access from index a-b
+
+print(list1[1:3])
+
+print(list1[:3])
+
+print(list1[1:])
+
