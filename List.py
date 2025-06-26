@@ -44,3 +44,145 @@ print(list1[:3])
 
 print(list1[1:])
 
+print(list1)
+
+# check if item exists in list
+if "orange"in list1:
+    print("yes the item exist in the list ")
+else:
+    print("oops! unfortunatly item is not exists in list")
+
+
+## change the list items 
+
+fruits = ["apple", "banana", "cherry","gawa"]
+fruits[1]= "orange"
+print(fruits)
+
+# change multiple items
+
+fruits[1:3] = ["mango", "watermelon"]
+print("The list of fruits after ranges change")
+print(fruits)
+
+
+thislist = ["apple", "banana", "cherry"]
+thislist[1:2] = ["blackcurrant", "watermelon"]
+print(thislist)
+
+fruits[1:3] = ["PineApple"]
+
+print(fruits)
+
+thislist = ["apple", "banana", "cherry"]
+thislist[1:3] = ["watermelon"]
+print(thislist)
+
+
+#insert method used to insert the value wothout replacing any item 
+
+fruits.insert(1, "grapes") 
+
+print(fruits)
+
+# append methon is used to add item at the end of the list 
+print("\n\n the Append functions\n")
+
+fruits = ['apple', 'banana', 'cherry']
+
+fruits.append("orange")
+print(fruits)
+
+#Extend list is used to to extend the list into list
+print("\n After using the Extend Function\n")
+fruits.extend(list1)
+print(fruits)
+
+# we can add any iterable 
+iter_ = (12,11,13,15)
+fruits.extend(iter_)
+print("\n after adding other iterable in list\n")
+print(fruits)
+
+## removing the lsit items
+print("\n List item removing items\n")
+
+fruits = ['apple', 'banana', 'cherry','banana']
+fruits.remove("apple")
+print(fruits)
+
+# when the duplicated 
+fruits.remove('banana')
+print(fruits)
+
+# remove specific index 
+fruits = ['apple', 'banana', 'cherry','banana']
+fruits.pop(2)
+print(fruits)
+# .pop removes the by default lat item of the list
+fruits = ['apple', 'banana', 'cherry','banana']
+fruits.pop()
+print(fruits)
+
+#del Keyword
+print('\n del key word working \n')
+fruits = ['apple', 'banana', 'cherry','banana']
+# it is used to del a special item of the list
+del fruits[0]
+print(fruits)
+
+# it can delete complete list 
+del fruits
+
+## Clear Method
+print("after applying clear()")
+fruits = ['apple', 'banana', 'cherry','banana']
+fruits.clear()
+
+print(fruits)
+
+
+print("\n Loop through list\n")
+fruits = ['apple', 'banana', 'cherry','banana']
+for i in fruits:
+    print(i)
+
+## loop through index
+for i in  range(len(fruits)):
+    print(i)
+
+
+#iteraton through while loop
+
+i=0
+while i < len(fruits):
+    print(fruits[i])
+    i+=1
+
+# loop uisng list comprehension
+print("\nComprehension list\n")
+fruits = ['apple', 'banana', 'cherry','banana']
+[print(x) for x in fruits]
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+for x in fruits:
+    if 'a' in x:
+        newlist.append(x)
+print(newlist)
+
+# with comprehension list
+print("list with comprehension")
+newlist = [x for x in fruits if "a" in x]
+print(newlist)
+
+newlist = [x for x in fruits if x != "cherry"]
+print(newlist)
+
+newlist = [x for x in fruits]
+print(newlist)
+
+# use range function to create iterable 
+newlist= [x for x in range(10)]
+print(newlist)
+
