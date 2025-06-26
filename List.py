@@ -186,3 +186,16 @@ print(newlist)
 newlist= [x for x in range(10)]
 print(newlist)
 
+# list of number to get greater or equal to 5
+newlist = [x for x in newlist if x >=5]
+print(newlist)
+
+# make values in upper case  latter in list using comprehension
+newlist = [x.upper() for x in fruits ]
+print(newlist)
+
+newlist = ["hello" for x in fruits]
+print(newlist)
+
+newlist = [x if x != "banana" else "orange" for x in fruits]
+print(newlist)
