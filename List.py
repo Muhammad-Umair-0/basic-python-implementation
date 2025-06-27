@@ -199,3 +199,62 @@ print(newlist)
 
 newlist = [x if x != "banana" else "orange" for x in fruits]
 print(newlist)
+
+# List sorting
+fruits = ["orange", "mango", "kiwi", "pineapple", "banana"]
+fruits.sort()
+print(fruits)
+fruits.sort(reverse=True)
+print(fruits)
+# number list 
+num_list = [100, 50, 65, 82, 23]
+num_list.sort()
+print(num_list)
+num_list.sort(reverse=True)
+print(num_list)
+
+def myfunc(n):
+    return abs(n- 50)
+num_list = [100, 50, 65, 82, 23]
+num_list.sort(key=myfunc)
+print(num_list)
+
+
+# case in sensetive sort
+fruits = ["orange", "mango", "kiwi", "pineapple", "banana"]
+fruits.sort(key=str.lower)
+print(fruits)
+fruits.reverse()
+print(fruits)
+
+# copy list 
+print("\n copy list function \n")
+fru = fruits.copy()
+print(fru)
+
+#list method
+
+myFru = list(fruits)
+print("list method copy ")
+print(myFru)
+
+# slice  method copy
+
+slice_list = fruits[:]
+print(slice_list)
+
+#join list 
+print("\n Join liat methods\n")
+com_list = fruits + num_list
+print(com_list)
+
+# append function 
+for x in num_list:
+    fruits.append(x)
+print(fruits)
+
+# extend method
+
+num_list.extend(fruits)
+print(num_list)
+
