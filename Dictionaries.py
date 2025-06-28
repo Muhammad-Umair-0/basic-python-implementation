@@ -88,7 +88,76 @@ print(dic)
 
 dic.popitem()
 print(dic)
-
+#clear method is used to clear the dictionary
+dic.clear()
+print("the dictionary after clear method,", dic)
 #del keyword is used to delete the dictionary
 del dic
 # print(dic)  # it will raise the error because we already delete the dictionary 
+
+# Loop in dictionaries
+
+dic = {
+    "brand": "ford",
+    "model":  "Mustang",
+    "year":  2004,
+    "year": 2000,
+    "color": ["red","green","blue"],
+    "electric": False
+ }
+print("\nloop to print dictionary Values\n")
+for x in dic.values():
+    print(x)
+
+print("\nloop to print dictionary keys\n")
+for x in dic.keys():
+    print(x)
+
+print("\nloop to print dictionary items\n")
+for x,y in dic.items():
+    print(x,y)
+
+
+## make a copy of dictionary 
+mydic = dic.copy()
+print(mydic)
+
+
+mydic1 = dict(dic)
+print(mydic1)
+
+
+
+## Nested Dictionary 
+child1 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+child2 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+child3 = {
+  "name" : "Linus",
+  "year" : 2011
+}
+
+myfamily = {
+  "child1" : child1,
+  "child2" : child2,
+  "child3" : child3
+}
+
+print(myfamily["child2"]["name"])
+
+
+# Loop Through the keys and Dictionaries
+for x, obj in myfamily.items():
+    print(x)
+
+
+    for y in obj:
+        print(y + ':',obj[y])
+
+
+
