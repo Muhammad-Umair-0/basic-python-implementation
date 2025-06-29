@@ -67,4 +67,55 @@ if x > 10:
     print("but not above 20.")
 
 # match
+#syntax
+# match expression:
+#   case x:
+#     code block
+#   case y:
+#     code block
+#   case z:
+#     code block
+
+
+day = 4
+match day:
+  case 1:
+    print("Monday")
+  case 2:
+    print("Tuesday")
+  case 3:
+    print("Wednesday")
+  case 4:
+    print("Thursday")
+  case 5:
+    print("Friday")
+  case 6:
+    print("Saturday")
+  case 7:
+    print("Sunday")
+
+
+#Match default
+day = 4
+match day:
+  case 6:
+    print("saturday")
+  case 7:
+    print("Sunday")
+  case _:
+    print("Looking forward to the weekend")
+
+# combine match Values
+
+# get input from user  
+day  = int(input("Please enter the number to check is its weekend or not"))
+match day :
+  case 1|2|3|4|5:
+    print("Today is a week day ")
+  case 6|7:
+    print("huhuuu! its weekend")
+  case _:
+    print("please enter a week day from 1 to 7")
+  
+  
 
