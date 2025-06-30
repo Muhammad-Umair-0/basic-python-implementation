@@ -30,3 +30,29 @@ with open("demo.txt") as f:
         print(x)
 
 
+# now we append more text in the file
+with open('demo.txt', 'a') as f:
+    f.write("Now file has more content!")
+
+
+#read the file after appending more text
+with open('demo.txt') as f:
+    print(f.read())
+
+
+# overwrite the entire file
+with open("demo.txt", "w") as f :
+    f.write("woops!  i have deleted the content !")
+
+
+#open and read the file afyer over writing
+with open('demo.txt') as f:
+    print(f.read())
+
+
+# remove file
+
+import os
+os.remove('demo.txt')
+
+
