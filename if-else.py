@@ -117,5 +117,5 @@ match day :
   case _:
     print("please enter a week day from 1 to 7")
   
-  
+
 
