@@ -131,3 +131,111 @@ newarr = arr.astype(bool)
 print(newarr)
 print(newarr.dtype)
 
+
+##Copy and View
+print("\n copy vs View")
+#Copy
+
+arr = np.array([1,2,3,4,5])
+x = arr.copy()
+arr[0] = 11
+print(arr)
+print(x)
+
+#view
+arr = np.array([1,2,3,4,5])
+x = arr.view()
+arr[0] = 11
+print(arr)
+print(x)
+
+# check if array own its data
+arr = np.array([1,2,3,4,5])
+x= arr.copy()
+y= arr.view()
+
+print(x.base)
+print(y.base)
+
+
+
+#shape of Array
+print("\n array shape")
+arr = np.array([[1,2,3,4],[5,6,7,8]])
+print(arr.shape)
+
+#array with dimensions 
+arr  = np.array([1,2,3,4,5],ndmin=5)
+print(arr)
+print(arr.shape)
+
+
+#Reshape array 
+print("\n Reshape the Array\n")
+#converting from 1 dim to 2-D
+
+arr = np.array([1,2,3,4,5,6,7,8,9,10,11,12])
+newa = arr.reshape(3,4)
+print(newa)
+D3 = arr.reshape(2,3,2) 
+print(D3)
+
+#chech if return array is a copy or view
+print(newa.base)
+#convert 1D array to 3d array 
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+newarr = arr.reshape(2, 2, -1)
+print(newarr)
+
+# flattening the array 
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+newarr = arr.reshape(-1)
+print(newarr)
+
+
+## Iterating Array 
+# 1-D array 
+arr = np.array([1,2,3])
+
+for x in arr:
+    print(x)
+
+
+# 2-D array 
+arr = np.array([[1,2,3,4],[5,6,7,8]])
+for x in arr:
+    print(x)
+#iterate Each scalor element of 2-D array 
+for x in arr:
+    for y in x:
+        print(y)
+
+
+#iteration through the 3d arry
+arr = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
+for x in arr:
+    for y in x:
+        for z in y:
+            print(z)
+
+
+#nditer
+print("\n nditer")
+for x in np.nditer(arr):
+    print(x)
+
+arr = np.array([1, 2, 3])
+for x in np.nditer(arr, flags=['buffered'], op_dtypes=['S']):
+    print(x)
+
+#skipping the 1 element 
+
+arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+for x in np.nditer(arr[:, ::2]):
+    print(x)
+
+
+# ndenumerate
+arr = np.array([[1, 2, 3],[4,5,6]])
+for idx, x in np.ndenumerate(arr):
+  print(idx, x)
