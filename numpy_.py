@@ -239,3 +239,153 @@ for x in np.nditer(arr[:, ::2]):
 arr = np.array([[1, 2, 3],[4,5,6]])
 for idx, x in np.ndenumerate(arr):
   print(idx, x)
+
+
+
+## Joining Numpy array 
+print("\n working on joining numpy array")
+
+# to concatenate the 1-D array
+arr1 =np.array([1,2,3])
+arr2 = np.array([4,5,6])
+arr = np.concatenate((arr1,arr2))
+print(arr)
+
+#join 2-D  array
+arr1 = np.array([[1, 2], [3, 4]])
+arr2 = np.array([[5, 6], [7, 8]])
+arr = np.concatenate((arr1, arr2), axis=1)
+print(arr)
+
+#jpining with stack
+arr1 =np.array([1,2,3])
+arr2 = np.array([4,5,6])
+arr = np.stack((arr1, arr2), axis=1)
+print("arr",arr)
+
+#hstack
+arr = np.hstack((arr1,arr2))
+print(arr)
+
+# Vstack stack along columns
+
+arr = np.vstack((arr1, arr2))
+print(arr) 
+
+# depth stacking along height (depth) 
+
+arr = np.dstack((arr1,arr2))
+print(arr)
+
+# Splitting array 
+print("\nsplitting the arrauy")
+arr = np.array([1,2,3,4,5,6,7])
+newa = np.array_split(arr,3)
+print(newa)
+
+# split in to 4 parts
+newa = np.array_split(arr, 4)
+print(newa)
+print(newa[0])
+print(newa[1])
+print(newa[2])
+print(newa[3])
+
+#spliting 2D array
+arr = np.array([[1, 2,3], [3, 4,4], [5, 6,8], [7, 8,9], [9, 8,10], [11, 5,12]])
+newa = np.array_split(arr,3)
+print(newa)
+
+arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16, 17, 18]])
+newarr = np.array_split(arr, 3, axis=1)
+print(newarr)
+
+#split 2d array into 3d array 
+arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16, 17, 18]])
+newa = np.hsplit(arr,3)
+print("\n After the hsplit\n")
+print(newa)
+
+
+## array Search
+
+print("\n array search \n")
+arr = np.array([1,2,3,4,2,3,2])
+
+x = np.where(arr==2)
+print(x)
+
+#find index where value is even
+x = np.where(arr%2==0)
+print(x)
+
+
+##Search sorted
+x= np.searchsorted(arr,3)
+print(x)
+x= np.searchsorted(arr,3,side="right")
+print(x)
+
+# search sorted for multiple values
+x= np.searchsorted(arr, [2,3,4])
+print(x)
+
+
+
+# Array sorting 
+print("\n Array sorting\n")
+arr = np.array([0,3,4,1,3])
+print(np.sort(arr))
+
+# sorting alphabeticAlly
+arr = np.array(['banana', 'cherry', 'apple'])
+print(np.sort(arr))
+
+
+#sorting 2D array
+arr = np.array([[3, 2, 4], [5, 0, 1]])
+print(np.sort(arr))
+
+
+##Filtering the array
+print("\nfiltering The Array\n")
+arr = np.array([2,3,4,6])
+x = [True,False,False,True]
+newa = arr[x]
+print(newa)
+
+
+# filtering the array thatnhave the value greater than 40
+arr = np.array([2,3,42,6])
+filter_arr = []
+
+
+#go through each element in array 
+arr = np.array([41, 42, 43, 44])
+
+# Create an empty list
+filter_arr = []
+
+# go through each element in arr
+for element in arr:
+  # if the element is higher than 42, set the value to True, otherwise False:
+  if element > 42:
+    filter_arr.append(True)
+  else:
+    filter_arr.append(False)
+
+newarr = arr[filter_arr]
+
+print(filter_arr)
+print(newarr)
+
+
+#create a direct filter
+arr = np.array([41, 42, 43, 44])
+
+filter_arr = arr > 42
+
+newarr = arr[filter_arr]
+
+print(filter_arr)
+print(newarr)
