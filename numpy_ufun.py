@@ -281,3 +281,24 @@ print("\nNumpy Set Operations:")
 arr = np.array([1, 2, 3, 4,3,4,5,6,7,8,4,3,2,5])
 x =np.unique(arr)
 print(x)
+
+#unions
+arr1 = np.array([1, 2, 3, 4])
+arr2 = np.array([3, 4, 5, 6])
+x = np.union1d(arr1,arr2)
+print("Union of arr1 and arr2:")
+print(x)
+
+#intersection
+x = np.intersect1d(arr1, arr2)
+print("Intersection of arr1 and arr2:")
+print(x)
+
+#difference
+x = np.setdiff1d(arr1, arr2)
+print("Difference of arr1 and arr2:")   
+print(x)
+#symmetric difference
+x = np.setxor1d(arr1, arr2)
+print("Symmetric difference of arr1 and arr2:")
+print(x)    
