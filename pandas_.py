@@ -59,3 +59,34 @@ print(df.loc[0])
 # return row 0,1,2 
 print(df.loc[[0,1,2]])
 
+# add list of names given to each row 
+df = pd.DataFrame(data, index = ["day1", "day2","day3"])
+print(df)
+
+
+#  Locate by index name
+print(df.loc["day2"])
+
+
+## Reading csv file
+df = pd.read_csv('data.csv')
+print(df.to_string)
+print(df)
+
+#check number of max rows return
+print(pd.options.display.max_rows)
+
+
+#reading the Json 
+
+df1 = pd.read_json("data.json")
+print("The Json data")
+
+print(df1)
+
+
+# data analysis 
+print("\n Data analysis")
+print(df1.head())
+# Data info 
+print(df1.info())
