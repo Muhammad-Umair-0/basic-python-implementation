@@ -89,4 +89,5 @@ print(df1)
 print("\n Data analysis")
 print(df1.head())
 # Data info 
+print("data info is ")
 print(df1.info())
