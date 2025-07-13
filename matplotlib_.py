@@ -109,4 +109,150 @@ plt.ylabel("Calorie Burnage", fontdict = font1)
 plt.grid(axis='x')
 plt.show()
 
+# subplots
+#plot 1:
+print("Creating subplots")
+plt.figure(figsize=(10, 5)) 
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(1, 2, 1)
+plt.plot(x,y)
+
+#plot 2:
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(1, 2, 2)
+plt.plot(x,y)
+
+plt.show()
+
+
+# plot 6 subplots
+x= np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+plt.axis('off')
+plt.subplot(2, 3, 1)
+plt.plot(x,y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(2, 3, 2)
+plt.plot(x,y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(2, 3, 3)
+plt.plot(x,y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(2, 3, 4)
+plt.plot(x,y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(2, 3, 5)
+plt.plot(x,y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(2, 3, 6)
+plt.plot(x,y)
+plt.show()
+
+def plot_six_subplots():
+    x1 = np.array([0, 1, 2, 3])
+    y1 = np.array([3, 8, 1, 10])
+    x2 = np.array([0, 1, 2, 3])
+    y2 = np.array([10, 20, 30, 40])
+
+    for i in range(1, 7):
+        plt.axis('off')
+        plt.subplot(2, 3, i)
+        if i % 2 == 1:
+            plt.plot(x1, y1)
+        else:
+            plt.plot(x2, y2)
+    plt.show()
+
+plot_six_subplots()
+
+# scatter plot
+x = np.array([0, 1, 2, 3, 4, 5])
+y = np.array([3, 8, 1, 10, 5, 7])
+print("Scatter plot ")
+plt.scatter(x,y, color = 'hotpink')
+plt.show()
+
+
+#draw two plots with the same figure
+#day one, the age and speed of 13 cars:
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+plt.scatter(x, y)
+
+#day two, the age and speed of 15 cars:
+x = np.array([2,2,8,1,15,8,12,9,7,3,11,4,7,14,12])
+y = np.array([100,105,84,105,90,99,90,95,94,100,79,112,91,80,85])
+plt.scatter(x, y, color = '#88c999')
+
+plt.show()
+
+
+#  bar plot 
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.bar(x,y)
+plt.show()
+
+
+# horizontal bar
+
+plt.barh(x,y)
+plt.show()
+
+# bar color
+
+plt.bar(x,y, color='red')
+plt.show()
+
+# width 
+plt.bar(x,y,width=0.1)
+plt.show()
+
+
+
+# histogram
+import numpy as np
+
+x = np.random.normal(170, 10, 250)
+
+print(x)
+
+plt.hist(x)
+plt.show()
+
+
+# pie Chart
+
+y = np.array([35,25,25,15])
+mylabels = ['apples', 'Bnanas', 'Cherries','Dates']
+
+
+plt.pie(y)
+plt.show()
+
+# pie with labels
+
+plt.pie(y, labels=mylabels)
+plt.show()
+
 
