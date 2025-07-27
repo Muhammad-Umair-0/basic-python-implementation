@@ -60,8 +60,34 @@ class Student:
         self.name = name
         self.age = age
 
+    # instance Methods
+    def show(self):
+        print(f"Student {self.name, self.age, self.school_name}")
+    # instance method
+    def change_age(self,new_age):
+        self.age = new_age
+    
+    # class method
+    @classmethod
+    def modify_school_name(cls, new_name):
+        cls.school_name = new_name
 
 
-obj = Student("mari",25)
-print(obj.school_name)
-print(obj.age)
+# object creation 
+
+obj_stud = Student("mari",25)
+print(obj_stud.school_name)
+print(obj_stud.age)
+obj_stud.show()
+
+
+s1 = Student('hamza',24)
+print("THe ")
+# called instant method 
+
+s1.show()
+s1.change_age(13)
+s1.show()
+
+Student.modify_school_name("hkjshkfjhksdjf")
+s1.show()
