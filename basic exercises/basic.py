@@ -53,3 +53,26 @@ print(a)
 b = numbers_y[0]==numbers_y[-1]
 print(b)
     
+# display numbers devisible by 5
+print("numbers devisible by 5 ")
+a = [10,20,33,46,55]
+for i in a:
+    if i%5==0:
+        print(i)
+
+
+#  ex 7: Find the number of occurrences of a substring in a string
+print("Find the number of occurrences of a substring in a string")
+str_x = "Emma is good developer. Emma is a writer"
+print(str_x.count("Emma"))
+print(str_x.count("is"))
+print(str_x.count("a"))
+
+# EX8: print the patterm
+for i in range(6):
+    for j in range(i):
+        print(i, end="")
+    print("\n")
+
+# EX 9 check palindrome Number
+print("\n Check the palindrome number ")
