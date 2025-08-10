@@ -21,13 +21,13 @@ for i in range(10):
     previous=i
 
 # characters present at even index
-str = "MEri_malik"
-n = int(len(str))
+my_str = "MEri_malik"
+n = int(len(my_str))
 for i in range(0,n,2):
     print(f"inex {i}")
-    print(str[i])
+    print(my_str[i])
 
-print(str[0::2])
+print(my_str[0::2])
 
 
 # Ex 4 remove 1st n characters from n 
@@ -76,3 +76,13 @@ for i in range(6):
 
 # EX 9 check palindrome Number
 print("\n Check the palindrome number ")
+
+n = 121
+str_n = str(n)
+str_rev_n = str_n[::-1]
+
+if str_n == str_rev_n:
+
+    print(f"{n} is palidrome")
+else:
+    print(f"ooh {n} is not palidrome")
