@@ -1,6 +1,5 @@
 # method:1   string slicing 
 n = int(input("enter a integer value"))
-n=-n
 n_str = str(n)
 
 rev_n = n_str[::-1]
